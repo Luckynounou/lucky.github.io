@@ -1,0 +1,436 @@
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+}
+
+.header {
+    position: fixed; /* Ensures the header is fixed at the top */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #090909;
+    color: #fff;
+    z-index: 1000; /* Keeps the header above other elements */
+    padding: 10px 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Further increased height */
+    width: 100px;  /* Maintain aspect ratio */
+    padding-right: 30px;
+}
+
+.header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar ul li {
+    margin: 0 15px;
+}
+
+.header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header .navbar ul li a:hover {
+    color: #ff9900;
+}
+
+.hero {
+    background-color: #e0dbdb;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 90%;
+    padding-top: 70px; /* Adjust this value based on the header height */
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 20px;
+}
+
+section#night-routine {
+    margin-bottom: 10px;
+}
+
+section#how-do-we-age {
+    margin-top: 10px;
+}
+
+section h3 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+section p {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.product-card, .special-product-card, .aging-product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px 5px;
+    text-align: center;
+    flex: 0 0 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover, .special-product-card:hover, .aging-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img, .special-product-card img, .aging-product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+
+.product-card h4, .special-product-card h4, .aging-product-card h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-card button, .aging-product-card button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.product-card button:hover, .aging-product-card button:hover {
+    background-color: #333;
+}
+
+.special-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.special-products .special-product-card {
+    margin: 5px;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.aging-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.aging-product-details {
+    padding: 10px;
+}
+
+.expert-section {
+    background-color: #f0f0f0;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.expert-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.expert-video video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.expert-content {
+    max-width: 600px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.expert-content h2 {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.expert-content h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.expert-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .hero, .expert-section, .ebooks {
+        padding: 20px;
+        margin: 10px;
+    }
+    .expert-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .expert-content {
+        margin-left: 0;
+    }
+    .expert-video video {
+        max-width: 100%;
+    }
+    .product-card, .special-product-card, .aging-product-card, .ebook-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+    .products, .aging-products {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* eBook recommendation section */
+.ebooks {
+    background-color: #f3f3f3;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.ebook-card {
+    display: inline-block;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.ebook-card:hover {
+    transform: scale(1.05);
+}
+
+.ebook-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ebook-details {
+    padding: 20px;
+}
+
+.ebook-details h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.ebook-details p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.ebook-details button {
+    padding: 10px 20px;
+    background-color: #131315;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ebook-details button:hover {
+    background-color: #131316;
+}
+
+footer {
+    color: rgb(22, 22, 22);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer a {
+    color: #191817;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3%;
+    }
+    
+    .header .navbar ul {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    
+    .header .navbar ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero {
+        padding: 20px 10px;
+        margin: 10px;
+        width: 100%;
+    }
+    
+    section {
+        margin: 10px;
+    }
+    
+    .products, .aging-products {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .expert-video video {
+        width: 50%;
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .product-card, .special-product-card, .aging-product-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+    
+    .expert-section {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .expert-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .expert-content {
+        margin-left: 0;
+    }
+    
+    .special-products {
+        padding: 10px;
+    }
+    
+    .ebooks {
+        padding: 20px 10px;
+    }
+    
+    .ebook-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AOS Animation Styles */
+[data-aos="fade-down"], [data-aos="fade-up"], [data-aos="zoom-in"], [data-aos="fade-right"] {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}

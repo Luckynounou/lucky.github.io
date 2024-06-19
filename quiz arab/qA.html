@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان تشخيص البشرة</title>
+    <link rel="stylesheet" href="qA.css">
+</head>
+<body>
+    <div class="quiz-container" id="quiz">
+        <header>
+            <h1>اكتشف نوع بشرتك</h1>
+            <p>خذ هذا الاستبيان للحصول على توصيات مخصصة للعناية بالبشرة.</p>
+        </header>
+        <div class="quiz-header">
+            <h2 id="question">نص السؤال</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">إجابة أ</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">إجابة ب</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">إجابة ج</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">إجابة د</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">إرسال</button>
+    </div>
+    
+    <script src="qA.js"></script>
+</body>
+</html>
